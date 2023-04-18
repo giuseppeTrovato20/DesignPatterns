@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="structural\Composite\" />
+    <None Remove="structural\Bridge\" />
+    <None Remove="structural\Decorator\" />
+    <None Remove="structural\Facade\" />
+    <None Remove="Comportamental\ChainOfResponsability\" />
+    <None Remove="Creational\" />
+    <None Remove="Creational\Factory\" />
+    <None Remove="Creational\FactoryImplemented\" />
+    <None Remove="Creational\Prototype\" />
+    <None Remove="Creational\Singleton\" />
+    <None Remove="Creational\Builder\" />
+    <None Remove="structural\FlyWeight\" />
+    <None Remove="structural\Proxy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="structural\Composite\" />
+    <Folder Include="structural\Bridge\" />
+    <Folder Include="structural\Decorator\" />
+    <Folder Include="structural\Facade\" />
+    <Folder Include="Behavioural\ChainOfResponsability\" />
+    <Folder Include="Creational\" />
+    <Folder Include="Creational\Factory\" />
+    <Folder Include="Creational\FactoryImplemented\" />
+    <Folder Include="Creational\Prototype\" />
+    <Folder Include="Creational\Singleton\" />
+    <Folder Include="Creational\Builder\" />
+    <Folder Include="structural\FlyWeight\" />
+    <Folder Include="structural\Proxy\" />
+  </ItemGroup>
+</Project>
