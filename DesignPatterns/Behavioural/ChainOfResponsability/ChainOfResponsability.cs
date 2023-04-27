@@ -61,30 +61,29 @@ namespace DesignPatterns.Comportamental.ChainOfResponsability
         }
     }
 
-    // Client
-    //public class Program
-    //{
-    //    public static void Main(string[] args)
-    //    {
-    //        // Crea la catena di responsabilità
-    //        IManutentoreAuto meccanico = new Meccanico();
-    //        IManutentoreAuto elettricista = new Elettricista();
-    //        IManutentoreAuto carrozziere = new Carrozziere();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Crea la catena di responsabilità
+            IManutentoreAuto meccanico = new Meccanico();
+            IManutentoreAuto elettricista = new Elettricista();
+            IManutentoreAuto carrozziere = new Carrozziere();
 
-    //        meccanico.ProssimoManutentore = elettricista;
-    //        elettricista.ProssimoManutentore = carrozziere;
+            meccanico.ProssimoManutentore = elettricista;
+            elettricista.ProssimoManutentore = carrozziere;
 
-    //        // Esempio di utilizzo
-    //        GuastoAuto guastoMotore = new GuastoAuto("Motore");
-    //        GuastoAuto guastoElettronica = new GuastoAuto("Elettronica");
-    //        GuastoAuto guastoCarrozzeria = new GuastoAuto("Carrozzeria");
+            // Esempio di utilizzo
+            GuastoAuto guastoMotore = new GuastoAuto("Motore");
+            GuastoAuto guastoElettronica = new GuastoAuto("Elettronica");
+            GuastoAuto guastoCarrozzeria = new GuastoAuto("Carrozzeria");
 
-    //        meccanico.Ripara(guastoMotore);
-    //        meccanico.Ripara(guastoElettronica);
-    //        meccanico.Ripara(guastoCarrozzeria);
+            meccanico.Ripara(guastoMotore);
+            meccanico.Ripara(guastoElettronica);
+            meccanico.Ripara(guastoCarrozzeria);
 
-    //        Console.ReadLine();
-    //    }
-    //}
+            Console.ReadLine();
+        }
+    }
 }
 

@@ -1,6 +1,10 @@
 ﻿using System;
 namespace DesignPatterns.structural.Bridge
-{ 
+{
+
+    //ci permette di disaccoppiare due implementazioni concrete
+    //facendole comunicare con due interfacce distinte
+    //e ci permette di andare aggiungere nuove implementazione concrete
 
     // Astrazione - interfaccia per le forme
     public interface IForma

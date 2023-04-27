@@ -2,6 +2,8 @@
 namespace DesignPatterns.structural.Decorator
 {
 
+    //ci permette di aggiungere funzionalità ad un oggetto già istanziato
+
     public interface ICar
     {
         string GetDescription();
@@ -49,6 +51,7 @@ namespace DesignPatterns.structural.Decorator
         {
         }
 
+        //funzionalità del metodo non cambia + aggiunge qualcosa
         public override string GetDescription()
         {
             return _car.GetDescription() + ", Sport package";
@@ -86,7 +89,12 @@ namespace DesignPatterns.structural.Decorator
 
 
             ICar sportsCar = new SportPackage(baseCar);
+
+
+
             ICar luxuryCar = new LuxuryPackage(baseCar);
+
+
             ICar sportsLuxuryCar = new LuxuryPackage(sportsCar);
 
             Console.WriteLine("Base Car: ");

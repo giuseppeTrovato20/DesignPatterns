@@ -57,26 +57,26 @@ namespace DesignPatterns.structural.Adapter
         }
     }
 
-    //public class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        IBird sparrow = new Sparrow();
-    //        IToyDuck toyDuck = new ToyDuck();
-    //        IToyDuck birdAdapter = new BirdToToyDuckAdapter(sparrow);
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            IBird sparrow = new Sparrow();
+            IToyDuck toyDuck = new ToyDuck();
+            IToyDuck birdAdapter = new BirdToToyDuckAdapter(sparrow);
 
-    //        Console.WriteLine("Uccello:");
-    //        sparrow.Fly();
-    //        sparrow.Chirp();
+            Console.WriteLine("Uccello:");
+            sparrow.Fly();
+            sparrow.Chirp();
 
-    //        Console.WriteLine("\nGiocattolo per Anatra:");
-    //        toyDuck.Squeak();
+            Console.WriteLine("\nGiocattolo per Anatra:");
+            toyDuck.Squeak();
 
-    //        Console.WriteLine("\nAdapter in azione:");
-    //        birdAdapter.Squeak();
+            Console.WriteLine("\nAdapter in azione:");
+            birdAdapter.Squeak();
 
-    //        Console.ReadLine();
-    //    }
-    //}
+            Console.ReadLine();
+        }
+    }
 }
 

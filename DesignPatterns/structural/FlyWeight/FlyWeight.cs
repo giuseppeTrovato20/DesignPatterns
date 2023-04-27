@@ -1,6 +1,16 @@
 ﻿using System;
 namespace DesignPatterns.structural.FlyWeight
 {
+    //utilizzato quando abbiamo alcuni casi molto specifici in cui:
+    // - dobbiamo renderizzare migliaia o centinaia di migliaia di elementi a schermo
+    // - 
+    //riduce l'utilizzo di memoria condivendo oggetti
+    //che hanno alcuni valori identici
+
+    //proprietà invarianti / proprietà che non cambiano mai
+    //proprietà variabili / dinamiche 
+
+
     public interface ICharacter
     {
         void Display();
@@ -24,6 +34,9 @@ namespace DesignPatterns.structural.FlyWeight
     public class CharacterFactory
     {
         private Dictionary<char, ICharacter> characters = new Dictionary<char, ICharacter>();
+        //istanzia un oggetto per tutti i caratteri renderizzati e poi ci permette
+        //di riutilizzarli più efficentemente andandolo a richiamare e modificando solamente
+        //la posizione
 
         public ICharacter GetCharacter(char symbol)
         {
@@ -64,17 +77,17 @@ namespace DesignPatterns.structural.FlyWeight
         }
     }
 
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        TextProcessor textProcessor = new TextProcessor();
-    //        textProcessor.ProcessText("FlyweightDesignPatternExample");
-    //        textProcessor.DisplayText();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TextProcessor textProcessor = new TextProcessor();
+            textProcessor.ProcessText("FlyweightDesignPatternExampleStyle");
+            textProcessor.DisplayText();
 
-    //        textProcessor.ProcessText("FlyweightInTextProcessor");
-    //        textProcessor.DisplayText();
-    //    }
-    //}
+            textProcessor.ProcessText("FlyweightInTextProcessor");
+            textProcessor.DisplayText();
+        }
+    }
 }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using DesignPatterns.structural.Bridge;
+
 namespace DesignPatterns.structural.Facade
 {
     // Componenti del sottosistema
@@ -41,7 +43,7 @@ namespace DesignPatterns.structural.Facade
         }
     }
 
-    // Facade
+    // Facade - Facciata
     public class AutoFacade
     {
         private readonly Motore _motore;
@@ -77,9 +79,12 @@ namespace DesignPatterns.structural.Facade
             AutoFacade autoFacade = new AutoFacade();
 
             Console.WriteLine("=== Accendere l'auto ===");
+
             autoFacade.AccendiAuto();
 
+
             Console.WriteLine("\n=== Spegnere l'auto ===");
+
             autoFacade.SpegniAuto();
 
             Console.ReadLine();

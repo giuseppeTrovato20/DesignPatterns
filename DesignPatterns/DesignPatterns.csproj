@@ -21,6 +21,11 @@
     <None Remove="Creational\Builder\" />
     <None Remove="structural\FlyWeight\" />
     <None Remove="structural\Proxy\" />
+    <None Remove="Behavioural\command\" />
+    <None Remove="Behavioural\Interpreter\" />
+    <None Remove="Behavioural\Iterator\" />
+    <None Remove="Behavioural\Memento\" />
+    <None Remove="Behavioural\Observer\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="structural\Composite\" />
@@ -36,5 +41,10 @@
     <Folder Include="Creational\Builder\" />
     <Folder Include="structural\FlyWeight\" />
     <Folder Include="structural\Proxy\" />
+    <Folder Include="Behavioural\command\" />
+    <Folder Include="Behavioural\Interpreter\" />
+    <Folder Include="Behavioural\Iterator\" />
+    <Folder Include="Behavioural\Memento\" />
+    <Folder Include="Behavioural\Observer\" />
   </ItemGroup>
 </Project>
